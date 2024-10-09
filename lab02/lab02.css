@@ -1,0 +1,255 @@
+/* ● Class and id (either one or both). done
+● Box model using margin, padding and border. done
+● Hover:  Create a noticeable effect for a group or for a single HTML element. done
+● Have a layout with float, grid or flexbox (at least one, no need to use all). done
+● Show and hide at least one element using display or visibility properties. done
+● Opacity and z-index (either one or both). done
+● Use at least one CSS combinator. done
+● Use at least one pseudo-class and one pseudo-element. done
+● Use at least one animated item. done
+● Use at least one custom font (server-hosted or Google font). done
+● other css features are allowed */
+
+
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
+}
+
+h1, h2, h6, h3, section, figure, p{ /* done intentionally to remove the white bars around each element */
+    padding:0;
+    margin:0;
+}
+
+
+/* TO BE REPLACED BY RENOGARE FONT IF I CAN FIGURE OUT HOW TO DO IT*/
+main, summary{ 
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: auto;
+}
+
+.title-card{
+    background-color: #a6caeb;
+    padding: 150px;
+    height: 200px;
+}
+
+.slide-1, .slide-2, .slide-3, .slide-4, .slide-5{
+    padding: 150px;
+}
+.title-one{
+    height: 200px;
+    background-image: linear-gradient(#a6caeb, #ffedb3);
+}
+
+.slide-1{
+    background-color: #ffedb3;
+}
+
+.one-two{
+    height: 200px;
+    background-image: linear-gradient(#ffedb3, #d5eac9);
+}
+
+.slide-2{
+    background-color: #d5eac9;
+
+}
+
+.two-three{
+    height: 200px;
+    background-image: linear-gradient(#d5eac9, #f2b9c2);
+}
+
+.slide-3{
+    background-color: #f2b9c2;
+
+}
+
+.three-four{
+    height: 200px;
+    background-image: linear-gradient(#f2b9c2, #f8edbd);    
+}
+
+.slide-4{
+    background-color: #f8edbd;
+
+}
+
+.four-five{
+    height: 200px;
+    background-image: linear-gradient(#f8edbd, #d7caea);   
+}
+.slide-5, .credits{
+    background-color: #d7caea;
+
+}
+
+header {
+    text-align: center;
+    font-size: 80px;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+header.title {
+  animation: wiggle 2s infinite;
+  animation-play-state: paused;
+}
+
+header.title:hover {
+  animation-play-state: running;
+}
+
+h2.subtitle{
+    text-align: center;
+    height: 250px;
+}
+
+.slide-header{
+    font-size: 50px;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    z-index: 2;
+}
+
+.slide-content{
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.slide-1{
+    display: flex;
+    justify-content:space-between;
+}
+
+i{
+    color: #b20dbf;
+}
+
+.impossible > figcaption{
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+}
+
+.slide-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-2.h1, .slide-2.p{
+    z-index: 2;
+}
+
+.wavedash{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+figure.wavedash{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+}
+
+p.slide-content{
+    text-align: center;
+}
+
+.easy {
+    text-align: center;
+    padding: 50px;
+    font-size: 60px;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+  }
+
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(-360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        transform:rotate(-360deg); 
+    } 
+}
+
+.wavedash-img{
+    display: flex;
+    justify-content: center;
+    animation:spin 2s infinite;
+    animation-play-state: paused;
+    z-index: 0;
+}
+
+.wavedash-img:hover{
+    animation-play-state: running;
+}
+
+.slide-4{
+    display: flex;
+    flex-direction: column;
+
+}
+.paradise-img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+}
+
+.issues{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.slide-4.div{
+    justify-content: center;
+}
+
+.paradise-subheader{
+    font-size: 25px;
+    color: #ed0109
+}
+
+.paradise-subtitle{
+    text-align: center;
+}
+
+.birb{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+}
+
+.credits{
+    display: flex;
+    padding: 10px;
+}
+
+.top{
+    font-family: "Oswald", sans-serif;
+}
+.top::before{
+    content: '⬆️';
+}
