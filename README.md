@@ -30,10 +30,10 @@ Created a function that would check if a website was secure, and a function to c
 
 ### [LAB 5](https://cs.torontomu.ca/~rpmanoha/lab05/lab05.html) **(Completed)**
 Fifth lab is designed to learn more Javascript and learn jQuery
-Created a function to: 
-  Take inputs from a form and validate them
-  Count the number of characters and letters in a <textarea>
-  Enlarge an image when clicked on, and return to normal size when a button is clicked.
+Created a function to: <br /> <br />
+  Take inputs from a form and validate them <br />
+  Count the number of characters and letters in a <textarea> <br />
+  Enlarge an image when clicked on, and return to normal size when a button is clicked. <br />
 
 ### [LAB 6](https://cs.torontomu.ca/~rpmanoha/lab06/lab06.html) **(In Progress)**
 
