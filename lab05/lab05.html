@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <style>
+        #myImage {
+            width: 500px;
+            height: auto;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #closeButton {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            padding: 5px 10px;
+
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+    <script>
+
+
+        function validateForm() {
+            event.preventDefault();
+
+            let name = document.forms["P1"]["name"].value;
+            let address = document.forms["P1"]["address"].value;
+            let phone = document.forms["P1"]["phone"].value;
+
+            let namePattern = /^[a-zA-Z]+$/
+
+            if (name==""){
+                alert("Name must not be empty!");
+                return false;
+            }
+            else if (namePattern.test(name)){
+                alert("Name must be composed characters from the alphabet!");
+                return false;
+            }
+            else if(address=="") {
+                alert("Address must not be empty!");
+                return false;
+            }
+            
+            let phonePattern = /^\((\d{3})\) (\d{3})-(\d{4})$/;
+
+            if (!phonePattern.test(phone)) {
+                alert("Phone number format is invalid! Use (123) 456-7890.");
+                return false;
+            }
+
+
+            let newPhone = phone.replace(phonePattern, "$1-$2-$3");
+            const p1Result = document.getElementById("p1Result");
+            p1Result.innerHTML=`
+                Congratulations ${name}! <br>
+                Your order of 2 tons of sand will be sent to your address at ${address}. <br>
+                We'll call you at [${newPhone}] to confirm delivery!`;
+        }
+
+        function countChars(){
+            let text = document.getElementById("text").value;
+            let chars = text.length;
+            let letters = (text.match(/[a-zA-Z]/g) || []).length;
+
+            document.getElementById("p2Output").innerHTML = `
+                Total Characters: ${chars} <br>
+                Letters Only: ${letters}`
+        }
+    </script>
+
+
+
+</head>
+<body  style="padding-left: 10%;
+              padding-right: 10%;
+              text-align: center;">
+
+    <div>
+        <h1>JavaScript 2 & jQuery</h1>
+    </div>
+
+    <div>
+        <div class="p1">
+            <h2>Problem 1</h2>
+            <form name="P1" onsubmit="validateForm()">
+                <label for="name">First Name</label> <br>
+                <input type="text" name="name" id="name"> <br>
+
+                <label for="address">Address</label> <br>
+                <input type="text" name="address" id="address"> <br>
+
+                <label for="phone">Phone Number</label> <br>
+                <input type="text" name="phone" id="phone"> <br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <h3 id="p1Result">aaaa</h3>
+
+        </div>
+
+        <div class="p2">
+            <h2>Problem 2</h2>
+            <textarea name="P2" id="text" oninput="countChars()" ></textarea>
+            <div id="p2Output"></div>
+        </div>
+
+        <div class="p3">
+            <h2>Problem 3</h2>
+                <h3>Click Image to Enlarge</h3>
+    <img id="myImage" src="whisper.jpg" alt="Sample Image">
+    <button id="closeButton">
+        <img src="close.png">
+    </button>
+
+    <script>
+        $(document).ready(function() {
+            let originalWidth = $("#myImage").width();
+            let enlargedWidth = originalWidth * 2;
+
+            // Click to enlarge
+            $("#myImage").click(function() {
+                $(this).animate({ width: enlargedWidth }, 500);
+                $("#closeButton").fadeIn();
+            });
+
+            // Click to close and return to original size
+            $("#closeButton").click(function() {
+                $("#myImage").animate({ width: originalWidth }, 500);
+                $(this).fadeOut();
+            });
+        });
+    </script>
+        </div>
+    </div>
+</body>
+</html>
+
