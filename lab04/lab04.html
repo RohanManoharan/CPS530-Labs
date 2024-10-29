@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+
+    <style>
+        ul{
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        function updateBookmarks() {
+            const textarea = document.getElementById("bookmarks").value;
+            let bookmarks = []
+            if (textarea.length !== 0) {
+                for (const line of textarea.split("\n")) {
+                    const secure = line.substring(0, 5);
+                    let img;
+                    if (secure == "https"){
+                        img = "lock.png"
+                    }
+                    else {
+                        img = "padlock.png"
+                    }
+                    bookmarks.push(`
+					<li>
+						<img src="${img}" width="20" height="20">
+						<a href="${line}">${line}</a>
+					</li>
+					`);
+                }
+            }
+
+            const bookmarkList = document.getElementById("bookmarkList");
+            if (!bookmarks.length) {
+                bookmarkList.style.display = "none";
+                return;
+            }
+            bookmarks.unshift("<ul>"); 
+            bookmarks.push("</ul>");
+            bookmarkList.innerHTML = bookmarks.join("");
+        }
+
+        function removeChars(s) {
+            return s.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'[\]\\|<>]/g, '');
+        }
+
+        function isPalindrome() {
+            let palindromes = [];
+            const textarea = document.getElementById("palindrome").value;
+            const lines = textarea.split("\n");
+
+            for (const line of lines) {
+                let str = removeChars(line).replace(/\s/g, '').toLowerCase();
+                let revStr = str.split("").reverse().join("");
+                if (str === revStr && str !== "") { 
+                    palindromes.push(`<p style="color:green;">"${line}" is a palindrome</p>`);
+                } else if (str !== "") {
+                    palindromes.push(`<p style="color:red;">"${line}" is NOT a palindrome</p>`);
+                }
+            }
+
+            const palindromeCheck = document.getElementById("palindromeCheck");
+            if (palindromes.length) {
+                palindromeCheck.style.display = "block";
+                palindromeCheck.innerHTML = palindromes.join("");
+            } else {
+                palindromeCheck.style.display = "none";
+            }
+        }
+
+        function update(){
+            updateBookmarks();
+            isPalindrome();
+        }
+    </script>
+
+</head>
+
+<body style="padding-left: 10%;
+            padding-right: 10%;
+            text-align: center;" onload="update()">
+    <h1>Client-Side Programming with Javascript</h1>
+    
+    <div>
+        <h3 id="p1">Problem 1</h3>
+        <textarea name="P1" id="bookmarks" cols="45" oninput="updateBookmarks()">http://www.example.net/index.html/
+https://guthib.com</textarea>
+        <div id="bookmarkList"></div>
+        <a href="https://www.flaticon.com/free-icons/telegram" title="telegram icons">Telegram icons created by egorpolyakov - Flaticon</a>    
+    </div>
+
+    <div>
+        <h3>Problem 2</h3>
+        <textarea name="P2" id="palindrome" cols="45" rows="5" oninput="isPalindrome()">Drab as a fool, aloof as a bard.
+It ain't over till it's over
+radar
+When you come to a fork in the road, take it
+Marge lets Norah see Sharon's telegram.</textarea>
+    </div>
+    <div id="palindromeCheck">
+    </div>
+</body>
+</html>
+
