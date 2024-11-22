@@ -35,12 +35,15 @@ Created a function to: <br /> <br />
   Count the number of characters and letters in a <textarea> <br />
   Enlarge an image when clicked on, and return to normal size when a button is clicked. <br />
 
-### [LAB 6](https://cs.torontomu.ca/~rpmanoha/lab06/lab06.html) **(In Progress)**
+### [LAB 6](https://cs.torontomu.ca/~rpmanoha/lab06/lab06.html) **(Completed)**
+Sixth lab is designed to teach the basics of SVGs.
 
-### [LAB 7](https://cs.torontomu.ca/~rpmanoha/lab07/lab07.html) **(Not Assigned Yet)**
+### [LAB 7](https://cs.torontomu.ca/~rpmanoha/lab07/lab07.html) **(Completed)**
+Seventh lab is designed to learn server side programming with Perl & CGI
 
-### [LAB 8](https://cs.torontomu.ca/~rpmanoha/lab08/lab08.html) **(Not Assigned Yet)**
+### [LAB 8](https://cs.torontomu.ca/~rpmanoha/lab08/lab08.php) **(Completed)**
+Eighth lab is designed to learn server side programming with php
 
-### [LAB 9](https://cs.torontomu.ca/~rpmanoha/lab09/lab09.html) **(Not Assigned Yet)**
+### [LAB 9](https://cs.torontomu.ca/~rpmanoha/lab09/lab09.html) **(In Progress)**
 
 ### [LAB 10](https://cs.torontomu.ca/~rpmanoha/lab10/lab10.html) **(Not Assigned Yet)**
