@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07b</title>
+</head>
+<body style="padding-left: 10%;
+             padding-right: 10%;
+             text-align: center;">
+    <div>
+        <h1>Customer Registration Form</h1>
+
+        <form name="P2" action="https://www2.cs.torontomu.ca/~rpmanoha/cgi-bin/lab07b.cgi" method="POST" enctype="multipart/form-data">
+            <h2>Name</h2>
+            <label for="fname">First Name</label> <br>
+            <input type="text" name="fname" id="fname"> <br>
+            <label for="lname">Last Name</label> <br>
+            <input type="text" name="lname" id="lname"> <br>
+
+            <h2>Address</h2>
+            <label for="sname">Street Name</label> <br>
+            <input type="text" name="sname" id="sname"> <br>
+            <label for="city">City</label> <br>
+            <input type="text" name="city" id="city"> <br>
+            <label for="pcode">Postal Code</label> <br>
+            <input type="text" name="pcode" id="pcode"> <br>
+            <label for="province">Province</label> <br>
+            <select name="province" id="province">
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Newfoundland & Labrador">Newfoundland & Labrador</option>
+                <option value="Northwest Territories">Northwest Territories</option>
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="Nunavut">Nunavut</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Yukon">Yukon</option>
+            </select>
+
+            <h2>Contact</h2>
+            <label for="phone">Phone Number</label> <br>
+            <input type="text" name="phone" id="phone"> <br>
+            <label for="email">Email</label> <br>
+            <input type="text" name="email" id="email"> <br>
+            <h2>Picture Upload</h2>
+            <input type="file" name="picture"> <br> <br>
+            
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
