@@ -39,7 +39,8 @@ Created a function to: <br /> <br />
 Sixth lab is designed to teach the basics of SVGs.
 
 ### [LAB 7](https://cs.torontomu.ca/~rpmanoha/lab07/lab07.html) **(Completed)**
-Seventh lab is designed to learn server side programming with Perl & CGI
+Seventh lab is designed to learn server side programming with Perl & CGI. <br>
+Please note that the link will not work as you need to be connected to the TMU VPN in order to access
 
 ### [LAB 8](https://cs.torontomu.ca/~rpmanoha/lab08/lab08.php) **(Completed)**
 Eighth lab is designed to learn server side programming with php
