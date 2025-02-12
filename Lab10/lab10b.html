@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab10b</title>
+</head>
+
+<style>
+    body{
+        margin: 0 auto;
+        padding-left: 20%;
+        padding-right: 20%;
+        text-align: center;
+
+    }
+</style>
+
+<body>
+    <h1>City Information Form</h1>
+
+    <!-- Form to submit to Ruby script -->
+    <form method="POST">
+        <label for="city">City Name:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="province">Province/State:</label><br>
+        <input type="text" id="province" name="province"><br><br>
+
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" required><br><br>
+
+        <label for="picture">Picture URL:</label><br>
+        <input type="url" id="picture" name="picture" required><br><br>
+
+        <button formaction="https://www2.cs.torontomu.ca/~rpmanoha/cgi-bin/lab10r.cgi" type="submit">Submit to Ruby Script</button>
+        <button formaction="https://www2.cs.torontomu.ca/~rpmanoha/cgi-bin/lab10p.cgi" type="submit">Submit to Python Script</button>
+
+    </form>
+
+</body>
+</html>
