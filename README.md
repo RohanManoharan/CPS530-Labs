@@ -44,6 +44,8 @@ Seventh lab is designed to learn server side programming with Perl & CGI
 ### [LAB 8](https://cs.torontomu.ca/~rpmanoha/lab08/lab08.php) **(Completed)**
 Eighth lab is designed to learn server side programming with php
 
-### [LAB 9](https://cs.torontomu.ca/~rpmanoha/lab09/lab09.html) **(In Progress)**
+### [LAB 9](https://cs.torontomu.ca/~rpmanoha/lab09/lab09.html) **(Completed)**
+Ninth lab is designed to learn more server side programming with php
 
-### [LAB 10](https://cs.torontomu.ca/~rpmanoha/lab10/lab10.html) **(Not Assigned Yet)**
+### [LAB 10](https://cs.torontomu.ca/~rpmanoha/lab10/lab10.html) **(Completed)**
+Tenth lab is deisgned to learn server side programming with asp and web-hosting
